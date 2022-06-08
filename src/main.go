@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"holders"
+
+	"github.com/erseros/holders"
 )
 
 func main() {
