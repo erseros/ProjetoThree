@@ -2,29 +2,30 @@ package main
 
 import (
 	"fmt"
+	"holders"
 )
 
 func main() {
-	holderGuilherme := holders.currenteHolder{holder: "Guilherme", agencyNumber: 9498, accountNumber: 1470258, bankBalance: 125.25}
+	holderGuilherme := holders.CurrenteHolder{Holder: "Guilherme", AgencyNumber: 9498, AccountNumber: 1470258, BankBalance: 125.25}
 	fmt.Println(holderGuilherme)
 
-	holderBruna := holders.currenteHolder{"Bruna", 9498, 1987258, 400.50}
+	holderBruna := holders.CurrenteHolder{"Bruna", 9498, 1987258, 400.50}
 	fmt.Println(holderBruna)
 
-	holderCris := *&holders.currenteHolder{}
+	holderCris := *&holders.CurrenteHolder{}
 
-	holderCris.holder = "Cris"
-	holderCris.agencyNumber = 6564
-	holderCris.accountNumber = 1245326
-	holderCris.bankBalance = 600
-
-	fmt.Println(holderCris)
-
-	holderCris.drawOut(500)
+	holderCris.Holder = "Cris"
+	holderCris.AgencyNumber = 6564
+	holderCris.AccountNumber = 1245326
+	holderCris.BankBalance = 600
 
 	fmt.Println(holderCris)
 
-	holderCris.deposit(240)
+	holderCris.DrawOut(500)
+
+	fmt.Println(holderCris)
+
+	holderCris.Deposit(240)
 
 	fmt.Println(holderCris)
 
@@ -33,7 +34,7 @@ func main() {
 	fmt.Println(holderGuilherme)
 	fmt.Println(holderCris)
 
-	holderGuilherme.transferValue(100, &holderCris)
+	holderGuilherme.TransferValue(100, &holderCris)
 
 	fmt.Println(holderGuilherme)
 	fmt.Println(holderCris)
