@@ -1,3 +1,3 @@
-module holders.go
+module github.com/erseros/ProjetoThree/holders
 
 go 1.18
