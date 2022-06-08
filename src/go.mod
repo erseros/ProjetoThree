@@ -1,4 +1,4 @@
-module github.com/erseros/holders
+module github.com/erseros
 
 go 1.18
 
